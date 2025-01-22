@@ -15,10 +15,11 @@ class CurrencyListViewModel {
   CurrencyListViewModel(this._repository);
 
   final currencies = ValueNotifier<CurrencyListState>(
-    const CurrencyListLoading(),
+    const CurrencyListInitial(),
   );
 
   Future<void> load() async {
+    currencies.value = CurrencyListLoading();
     final result = await _repository.load();
 
     switch (result) {
