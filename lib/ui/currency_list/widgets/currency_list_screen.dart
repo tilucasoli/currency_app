@@ -29,7 +29,6 @@ class _CurrencyListScreenState extends ConsumerState<CurrencyListScreen> {
           valueListenable: viewModel.currencies,
           builder: (context, state, child) {
             switch (state) {
-              case CurrencyListInitial():
               case CurrencyListLoading():
                 return const CircularProgressIndicator();
               case CurrencyListLoaded():

@@ -7,11 +7,11 @@ import '../services/currency_api_service.dart';
 
 part 'currency_rates_repository.g.dart';
 
-abstract interface class CurrencyRatesRepository{
+abstract interface class CurrencyRatesRepository {
   Future<Result<CurrencyRates>> load();
 }
 
-class RemoteCurrencyRatesRepository implements CurrencyRatesRepository{
+class RemoteCurrencyRatesRepository implements CurrencyRatesRepository {
   final CurrencyApiService apiService;
 
   const RemoteCurrencyRatesRepository(this.apiService);

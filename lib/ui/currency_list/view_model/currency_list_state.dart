@@ -4,10 +4,6 @@ sealed class CurrencyListState {
   const CurrencyListState();
 }
 
-class CurrencyListInitial extends CurrencyListState {
-  const CurrencyListInitial();
-}
-
 class CurrencyListLoading extends CurrencyListState {
   const CurrencyListLoading();
 }
